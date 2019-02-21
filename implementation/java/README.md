@@ -2,6 +2,7 @@
 
 [Bootstrapped](https://start.spring.io)
 
+* JAVA8
 * POJO generator from [swagger-codegen](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen-maven-plugin)
 * JPA power to create DB schema.
 * http://modelmapper.org

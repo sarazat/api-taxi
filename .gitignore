@@ -23,3 +23,5 @@
 hs_err_pid*
 
 api-doc/dist/*
+
+*.iml
