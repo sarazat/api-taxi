@@ -1,0 +1,22 @@
+tags:
+  - api
+operationId: getLocationsVehicleByID
+summary: Latest locations
+consumes:
+  - applicaton/json
+produces:
+  - application/json
+parameters:
+  - in: path
+    name: vehicleID
+    description: Vehicle ID
+    required: true
+    type: string
+  - $ref: '#/parameters/pagination'
+responses:
+  200:
+    description: vehicle info
+    type: array
+    items:
+      $ref: '#/definitions/Position'
+    maxItems: 10

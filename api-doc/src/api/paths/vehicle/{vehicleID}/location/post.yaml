@@ -1,0 +1,25 @@
+tags:
+  - api
+operationId: postLastestVehiclePosition
+summary: Report vehicle position
+consumes:
+  - applicaton/json
+produces:
+  - application/json
+parameters:
+  - in: path
+    name: vehicleID
+    description: vehicle id
+    required: true
+    type: string
+  - in:  body
+    name: position
+    schema:
+      $ref: '#/definitions/Position'
+
+responses:
+  201:
+    description: Report vehicle position
+    schema:
+      $ref: '#/definitions/Message'
+

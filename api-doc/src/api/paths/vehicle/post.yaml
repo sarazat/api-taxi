@@ -1,0 +1,18 @@
+tags:
+  - api
+operationId: postVehicle
+summary: New vehicle
+consumes:
+  - applicaton/json
+produces:
+  - application/json
+parameters:
+  - in: body
+    name: Vehicle
+    schema:
+      $ref: '#/definitions/Vehicle'
+responses:
+  200:
+    description: New vehicle
+    schema:
+      $ref: '#/definitions/Vehicle'

@@ -1,0 +1,19 @@
+tags:
+  - api
+operationId: getVehicleByID
+summary: Vehicle info
+consumes:
+  - applicaton/json
+produces:
+  - application/json
+parameters:
+  - in: path
+    name: vehicleID
+    description: Vehicle ID
+    required: true
+    type: string
+responses:
+  200:
+    description: vehicle info
+    schema:
+      $ref: '#/definitions/Vehicle'

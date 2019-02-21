@@ -1,0 +1,8 @@
+{
+  "dateLibrary": "java8",
+  "interfaceOnly" : true,
+  "hideGenerationTimestamp" : true,
+  "modelPackage" : "com.gbm.vehicle.pojos",
+  "apiPackage": "com.gbm.vehicle.api",
+  "invokerPackage": "invoker"
+}

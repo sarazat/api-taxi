@@ -1,0 +1,22 @@
+swagger: '2.0'
+info:
+  description: GBM API spec
+  version: 0.0.1
+  title: GBM API
+  contact:
+    name: '@'
+  license:
+    name: Apache 2.0
+
+tags:
+- name: webapp
+  description: General Webapp endpoint
+- name: api
+  description: General API endpoint
+
+
+paths: !!inc/dir ['paths']
+definitions: !!inc/dir ['definitions', {recursive: false, allowEmpty: false}]
+parameters:
+  pagination: !!inc/file 'helpers/pagination.yaml'
+
