@@ -21,34 +21,6 @@ Interview problem for a new and amazing job, all the application is a API driven
     5. Security.
 
 
-
-
-## Architecture
-
-### Architecture diagrams
-
-* General architecture
-
-![alt text][architecture]
-
-* Basic model
-![alt text][model]
-
-* Component diagram
-* AWS Deployment diagram
-
-  * Networking
-  ![alt text][network]
-
-* DB Diagram
-
-![alt text][db-schema]
-
-[requirement]: doc/images/requirement.jpeg "requirement"
-[architecture]: doc/images/general.png "architecture"
-[model]: doc/images/basic-model.png "model"
-
-[network]: doc/images/network.png "network"
 ## Project structure
 
 
