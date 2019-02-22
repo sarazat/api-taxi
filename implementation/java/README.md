@@ -11,7 +11,7 @@
 
 * Node v10.15.0 (nvm install )
 
-### Runing :sparkles:
+### Running :sparkles:
 * ```build-run.sh```
   or 
   
