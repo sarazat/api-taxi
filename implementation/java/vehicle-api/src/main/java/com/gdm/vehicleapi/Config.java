@@ -30,6 +30,8 @@ public class Config {
     this.modelMapper.createTypeMap(OffsetDateTime.class, Date.class)
       .setConverter(context -> Date.from(context.getSource().atZoneSameInstant(ZoneId.systemDefault()).toInstant()));
 
+    this.modelMapper.createTypeMap(PositionEntity.class, Position.class)
+      .addMapping(PositionEntity::getCreated, Position::setTimestamp);
   }
 
 
