@@ -7,6 +7,7 @@
 * JPA power to create DB schema.
 * http://modelmapper.org
 
+* build-run.sh o
 * Build ```mvn clean install```
 * Run ```mvn spring-boot:run``` from inside vehicle-api
 
