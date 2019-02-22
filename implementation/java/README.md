@@ -2,12 +2,19 @@
 
 [Bootstrapped](https://start.spring.io)
 
-* JAVA8
+* JAVA 8
 * POJO generator from [swagger-codegen](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen-maven-plugin)
 * JPA power to create DB schema.
 * http://modelmapper.org
 
-* build-run.sh o
+### Prerequisites
+
+* Node v10.15.0 (nvm install )
+
+### Runing :sparkles:
+* ```build-run.sh```
+  or 
+  
 * Build ```mvn clean install```
 * Run ```mvn spring-boot:run``` from inside vehicle-api
 
