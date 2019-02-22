@@ -26,5 +26,5 @@ Interview problem for a new and amazing job, all the application is a API driven
 
 ## Live
 
-* [API SPEC]()
+* [API SPEC](http://pad.projects.s3.amazonaws.com/proposal-gbm-api/index.html)
 
