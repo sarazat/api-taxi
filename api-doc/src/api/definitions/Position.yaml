@@ -14,7 +14,7 @@ properties:
     faker: 'address.longitude'
   timestamp:
     type: string
-    formar: date-time
+    format: date-time
 
 
 
