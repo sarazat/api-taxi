@@ -1,0 +1,18 @@
+tags:
+  - web
+operationId: subscribeVehicle
+summary: Notify vehicle movement
+consumes:
+  - applicaton/json
+produces:
+  - application/json
+parameters:
+  - in: body
+    name: Hook
+    schema:
+      $ref: '#/definitions/Hook'
+responses:
+  200:
+    description: Notify vehicle movement
+    schema:
+      $ref: '#/definitions/Hook'

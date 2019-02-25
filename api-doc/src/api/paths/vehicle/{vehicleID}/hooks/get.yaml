@@ -1,0 +1,18 @@
+tags:
+  - api
+operationId: getPaginatedHooks
+summary: All hooks paginated
+consumes:
+  - application/json
+produces:
+  - application/json
+parameters:
+  - $ref: '#/parameters/pagination'
+responses:
+  200:
+    description: Get hooks ordered by creation date
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Hook'
+      maxItems: 10

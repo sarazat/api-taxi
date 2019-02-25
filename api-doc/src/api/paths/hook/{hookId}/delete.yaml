@@ -1,0 +1,20 @@
+tags:
+  - api
+operationId: deleteHook
+summary: Stop receiving vehicle notification
+consumes:
+  - applicaton/json
+produces:
+  - application/json
+parameters:
+  - in: path
+    name: hookID
+    description: Hook id
+    required: true
+    type: string
+responses:
+  410:
+    description: Stop receiving vehicle notification
+    schema:
+      $ref: '#/definitions/Message'
+

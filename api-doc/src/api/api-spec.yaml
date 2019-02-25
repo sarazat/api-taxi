@@ -1,4 +1,7 @@
 swagger: '2.0'
+host: "localhost:8080"
+schemes:
+  - http
 info:
   description: GBM API spec
   version: 0.0.1

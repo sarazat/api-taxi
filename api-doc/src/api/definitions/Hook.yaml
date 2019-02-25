@@ -1,11 +1,15 @@
 required:
-  - plate
+  - payLoadUrl
 properties:
   id:
     type: string
     pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
     format: uuid
-  plate:
+  payLoadUrl:
     type: string
-    pattern: '[0-9A-Z]{3}-[0-9A-Z]{3}'
+    format: uri
+    faker: 'internet.url'
+  status:
+    type: string
 type: object
+
