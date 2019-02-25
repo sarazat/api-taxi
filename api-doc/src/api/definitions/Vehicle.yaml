@@ -7,5 +7,5 @@ properties:
     format: uuid
   plate:
     type: string
-    pattern: '[0-9A-Z]{3}-[0-9A-Z]{3}'
+    pattern: '[0-9A-Z]{6}'
 type: object
