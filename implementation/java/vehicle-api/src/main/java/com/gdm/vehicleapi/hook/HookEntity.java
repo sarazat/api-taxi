@@ -1,6 +1,5 @@
-package com.gdm.vehicleapi.position;
+package com.gdm.vehicleapi.hook;
 
-import com.gdm.vehicleapi.hook.HookCommand;
 import com.gdm.vehicleapi.vehicle.VehicleEntity;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,32 +10,32 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.PostPersist;
 import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Transient;
-import java.io.IOException;
 import java.util.Date;
 import java.util.UUID;
 
 @Entity
-public class PositionEntity {
+public class HookEntity {
 
   @Id
-  @GeneratedValue(generator = "uuidPosition")
-  @GenericGenerator(name = "uuidPosition", strategy = "org.hibernate.id.UUIDGenerator")
+  @GeneratedValue(generator = "uuidHook")
+  @GenericGenerator(name = "uuidHook", strategy = "org.hibernate.id.UUIDGenerator")
   private UUID id;
-  private Double lat;
-  private Double lon;
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "fk_vehicle")
   private VehicleEntity vehicle;
+  private String payLoadUrl;
   private Date created;
+  private Date updated;
+
+  private int latestStatusCode;
 
   @PrePersist
   protected void onCreate() {
     created = new Date();
   }
-
 
   public UUID getId() {
     return id;
@@ -44,22 +43,6 @@ public class PositionEntity {
 
   public void setId(UUID id) {
     this.id = id;
-  }
-
-  public Double getLat() {
-    return lat;
-  }
-
-  public void setLat(Double lat) {
-    this.lat = lat;
-  }
-
-  public Double getLon() {
-    return lon;
-  }
-
-  public void setLon(Double lon) {
-    this.lon = lon;
   }
 
   public VehicleEntity getVehicle() {
@@ -70,6 +53,14 @@ public class PositionEntity {
     this.vehicle = vehicle;
   }
 
+  public String getPayLoadUrl() {
+    return payLoadUrl;
+  }
+
+  public void setPayLoadUrl(String payLoadUrl) {
+    this.payLoadUrl = payLoadUrl;
+  }
+
   public Date getCreated() {
     return created;
   }
@@ -78,15 +69,22 @@ public class PositionEntity {
     this.created = created;
   }
 
-  @Override
-  public String toString() {
-    return "PositionEntity{" +
-      "id=" + id +
-      ", lat=" + lat +
-      ", lon=" + lon +
-      ", vehicle=" + vehicle +
-      ", created=" + created +
-      '}';
+  public Date getUpdated() {
+    return updated;
   }
+
+  @PreUpdate
+  public void setUpdated() {
+    this.updated = new Date();
+  }
+
+  public int getLatestStatusCode() {
+    return latestStatusCode;
+  }
+
+  public void setLatestStatusCode(int latestStatusCode) {
+    this.latestStatusCode = latestStatusCode;
+  }
+
 
 }

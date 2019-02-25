@@ -1,5 +1,6 @@
 package com.gdm.vehicleapi.vehicle;
 
+import com.gdm.vehicleapi.hook.HookEntity;
 import com.gdm.vehicleapi.position.PositionEntity;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -24,6 +25,10 @@ public class VehicleEntity {
   @OneToMany(mappedBy = "vehicle", fetch = FetchType.LAZY)
   private List<PositionEntity> positions;
 
+  @OneToMany(mappedBy = "vehicle", fetch = FetchType.LAZY)
+  private List<HookEntity> hooks;
+
+
   public UUID getId() {
     return id;
   }
@@ -38,5 +43,13 @@ public class VehicleEntity {
 
   public void setPlate(String plate) {
     this.plate = plate;
+  }
+
+  @Override
+  public String toString() {
+    return "VehicleEntity{" +
+      "id=" + id +
+      ", plate='" + plate + '\'' +
+      '}';
   }
 }

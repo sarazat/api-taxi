@@ -6,6 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import java.util.UUID;
@@ -40,6 +41,10 @@ public class GenericController<P, S extends GenericService<?, P, ?>> {
 
   public P save(final P p) {
     return s.savePojo(p);
+  }
+
+  public void deleteById(final String uuid) {
+    s.deleteById(UUID.fromString(uuid));
   }
 
 }

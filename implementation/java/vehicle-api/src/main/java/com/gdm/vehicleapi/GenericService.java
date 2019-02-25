@@ -10,8 +10,8 @@ import java.util.function.Function;
 
 /**
  * @param <E> Entity
- * @param <R> Repository
  * @param <P> POJO
+ * @param <R> Repository
  */
 public class GenericService<E, P, R extends JpaRepository<E, UUID>> {
 
